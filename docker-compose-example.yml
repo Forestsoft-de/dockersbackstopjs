@@ -1,0 +1,9 @@
+version: '2'
+services:
+  backstop:
+    build: ./backstopjs
+    volumes:
+      - ../backstop.json:/opt/BackstopJS/backstop.json
+      - ../backstop_data:/opt/BackstopJS/backstop_data
+    ports:
+      - "3001:3001"
